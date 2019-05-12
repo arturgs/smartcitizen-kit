@@ -29,7 +29,7 @@ boolean SCKServer::time(char *time_) {
    retry++;
    if (base__.enterCommandMode()) 
     {
-      if (base__.open(WEB[0], 80))
+      if (base__.open(WEB[0], 5000))
        {
         for(byte i = 0; i<3; i++) Serial1.print(WEBTIME[i]); //Requests to the server time
         if (base__.findInResponse("UTC:", 2000)) 
@@ -237,7 +237,7 @@ boolean SCKServer::connect()
 {
   int retry = 0;
   while (true){
-    if (base__.open(WEB[0], 80)) break;
+    if (base__.open(WEB[0], 5000)) break;
     else 
     {
       retry++;
@@ -354,4 +354,3 @@ void SCKServer::send(boolean sleep, boolean *wait_moment, long *value, char *tim
     }
   *wait_moment = false;
 }
-

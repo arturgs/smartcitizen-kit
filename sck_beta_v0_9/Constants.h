@@ -36,16 +36,12 @@ WIFLY Firmware Setting
 
 */
 
-#define networks 0
+#define networks 1
 #if (networks > 0)
-static char* mySSID[networks]      = { 
-  "SSID1"        , "SSID2"     };
-static char* myPassword[networks]  = { 
-  "PASS1"      , "PASS2"          };
-static char* wifiEncript[networks] = { 
-  WPA2         , WPA2                };
-static char* antennaExt[networks]  = { 
-  INT_ANT      , INT_ANT             };
+static char* mySSID[networks]      = {"***"};
+static char* myPassword[networks]  = {"***"};
+static char* wifiEncript[networks] = {WPA2};
+static char* antennaExt[networks]  = {INT_ANT};
 #endif      
 
 #define TWI_FREQ 400000L //Frecuencia bus I2C
@@ -217,9 +213,9 @@ static char buffer[buffer_length];
 
 // Basic Server Posts to the SmartCitizen Platform - EndPoint: http://data.smartcitizen.me/add 
 static char* WEB[8]={
-                  "data.smartcitizen.me",
+                  "192.168.0.2",
                   "PUT /add HTTP/1.1\n", 
-                  "Host: data.smartcitizen.me \n", 
+                  "Host: data.smartcitizen.me\n", 
                   "User-Agent: SmartCitizen \n", 
                   "X-SmartCitizenMacADDR: ", 
                   "X-SmartCitizenApiKey: ", 
@@ -230,7 +226,7 @@ static char* WEB[8]={
 static char* WEBTIME[3]={                  
                   /*Servidor de tiempo*/
                   "GET /datetime HTTP/1.1\n",
-                  "Host: data.smartcitizen.me \n",
+                  "Host: data.smartcitizen.me\n",
                   "User-Agent: SmartCitizen \n\n"  
                   };
 
