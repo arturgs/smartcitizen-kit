@@ -1,9 +1,11 @@
+This fork contains changes on the Firmware v0.9.4 for a local connection to a server on a local network on port 5000. 
+
 Smart Citizen Kit
 =================
 
 **Smart Citizen Kit BETA version for the Ambient Sensor Board.**
 
-<img src="http://docs.smartcitizen.me/img/sck_1.1_3.jpg" alt="SCK" style="width: 100%"/>
+<img src="https://docs.smartcitizen.me/assets/images/sck_1/sck_1.1_3.jpg" alt="SCK" style="width: 100%"/>
 
 ### Download
 
