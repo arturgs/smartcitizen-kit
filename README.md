@@ -1,4 +1,6 @@
-This fork contains changes on the Firmware v0.9.4 for a local connection to a server on a local network on port 5000. 
+This fork contains:
+- changes on the Firmware v0.9.4 for a local connection to a server on a local network (port 5000).
+- local flask server (datetime and data collection)
 
 Smart Citizen Kit
 =================
